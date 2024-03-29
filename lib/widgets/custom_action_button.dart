@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:note_app/constants.dart';
 import 'package:note_app/widgets/add_note_buttom_sheet.dart';
 
 class CustomActionButton extends StatelessWidget {
@@ -16,14 +17,15 @@ class CustomActionButton extends StatelessWidget {
           ),
         ),
       ),
-      backgroundColor: const Color(
-        0xff53EED4,
-      ),
+      backgroundColor: kPrimaryColor,
       onPressed: () {
         showModalBottomSheet(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(16),
+          ),
           context: context,
           builder: (context) {
-            return  AddNoteButtomSheet();
+            return const AddNoteButtomSheet();
           },
         );
       },
@@ -35,4 +37,3 @@ class CustomActionButton extends StatelessWidget {
     );
   }
 }
-

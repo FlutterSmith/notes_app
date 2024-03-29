@@ -131,6 +131,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.0"
+  loading_btn:
+    dependency: "direct main"
+    description:
+      name: loading_btn
+      sha256: ecc27ca22d611ee5d22db358410ca03c64b81644d952cb80f350b71746d82674
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.3"
   matcher:
     dependency: transitive
     description:

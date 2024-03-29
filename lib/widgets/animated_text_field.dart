@@ -3,7 +3,11 @@ import 'package:animated_hint_textfield/animated_hint_textfield.dart';
 import 'package:note_app/constants.dart';
 
 class CustomAnimatedTextField extends StatelessWidget {
-  const CustomAnimatedTextField({super.key});
+  const CustomAnimatedTextField(
+      {super.key, this.maxLines = 1, required this.hintTexts});
+
+  final int maxLines;
+  final String hintTexts;
 
   @override
   Widget build(BuildContext context) {
@@ -15,10 +19,8 @@ class CustomAnimatedTextField extends StatelessWidget {
         color: kPrimaryColor,
         overflow: TextOverflow.ellipsis,
       ),
-      hintTexts: const [
-        'Title...',
-        'you can write your title here...',
-      ],
+      hintTexts: [hintTexts],
+      maxLines: maxLines,
       decoration: InputDecoration(
         filled: true,
         border: OutlineInputBorder(

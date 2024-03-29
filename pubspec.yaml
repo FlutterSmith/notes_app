@@ -33,6 +33,7 @@ dependencies:
   flutter:
     sdk: flutter
   font_awesome_flutter: ^10.7.0
+  loading_btn: ^1.0.3
 
 dev_dependencies:
   flutter_lints: ^3.0.0

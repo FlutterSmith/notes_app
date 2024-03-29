@@ -7,33 +7,37 @@ import 'package:note_app/widgets/custom_loading_button.dart';
 class AddNoteButtomSheet extends StatelessWidget {
   const AddNoteButtomSheet({
     super.key,
+    required this.text,
   });
+  final String text;
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.all(16.0),
+    return Padding(
+      padding: const EdgeInsets.all(16.0),
       child: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            CustomAnimatedTextField(
+            const CustomAnimatedTextField(
               maxLines: 1,
               hintTexts: 'Note Title',
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            CustomAnimatedTextField(
+            const CustomAnimatedTextField(
               hintTexts: 'Note Content',
               maxLines: 5,
             ),
-            SizedBox(
+            const SizedBox(
               height: 60,
             ),
-            CustomLoadingButton(),
+            CustomLoadingButton(
+              text: (text),
+            ),
           ],
         ),
       ),

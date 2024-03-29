@@ -25,7 +25,9 @@ class CustomActionButton extends StatelessWidget {
           ),
           context: context,
           builder: (context) {
-            return const AddNoteButtomSheet();
+            return const AddNoteButtomSheet(
+              text: 'Add Note',
+            );
           },
         );
       },

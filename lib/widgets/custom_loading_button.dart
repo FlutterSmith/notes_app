@@ -5,7 +5,10 @@ import 'package:note_app/constants.dart';
 class CustomLoadingButton extends StatelessWidget {
   const CustomLoadingButton({
     super.key,
+    required this.text,
   });
+
+  final String text;
 
   @override
   Widget build(BuildContext context) {
@@ -23,8 +26,8 @@ class CustomLoadingButton extends StatelessWidget {
           valueColor: AlwaysStoppedAnimation<Color>(Colors.black),
         ),
       ),
-      child: const Text("Add",
-          style: TextStyle(
+      child: Text(text,
+          style: const TextStyle(
             color: Colors.black,
             fontSize: 20,
             fontWeight: FontWeight.bold,

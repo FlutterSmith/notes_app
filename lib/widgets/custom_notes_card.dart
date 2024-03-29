@@ -6,8 +6,7 @@ class CustomNotesCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return 
-    Container(
+    return Container(
       padding: const EdgeInsets.only(
         top: 24,
         bottom: 24,
@@ -55,12 +54,9 @@ class CustomNotesCard extends StatelessWidget {
               'May 21.2024',
               style: TextStyle(color: Colors.grey.shade800, fontSize: 16),
             ),
-            
           ),
         ],
-        
       ),
-      
     );
   }
 }

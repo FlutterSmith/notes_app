@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:note_app/constants.dart';
 import 'package:note_app/widgets/animated_text_field.dart';
-import 'package:loading_btn/loading_btn.dart';
 import 'package:note_app/widgets/custom_loading_button.dart';
 
 class AddNoteButtomSheet extends StatelessWidget {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:note_app/widgets/animated_text_field.dart';
-import 'package:note_app/widgets/custom_app_bar.dart';
+import 'package:note_app/views/widgets/custom_text_field.dart';
+import 'package:note_app/views/widgets/custom_app_bar.dart';
 
 class EditNotesListView extends StatelessWidget {
   const EditNotesListView({
@@ -22,15 +22,15 @@ class EditNotesListView extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
-          CustomAnimatedTextField(
+          CustomTextField(
             maxLines: 1,
-            hintTexts: 'Note Title',
+            hint: 'Note Title',
           ),
           SizedBox(
             height: 20,
           ),
-          CustomAnimatedTextField(
-            hintTexts: 'Note Content',
+          CustomTextField(
+            hint: 'Note Content',
             maxLines: 5,
           ),
         ],

@@ -8,7 +8,7 @@ class NoteModel extends HiveObject {
   @HiveField(1)
   final String content;
   @HiveField(2)
-  DateTime dateTime = DateTime.now();
+  final String dateTime;
   @HiveField(3)
   final int color;
 

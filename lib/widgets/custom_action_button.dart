@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:note_app/constants.dart';
-import 'package:note_app/views/widgets/add_note_buttom_sheet.dart';
+import 'package:note_app/widgets/add_note_buttom_sheet.dart';
 
 class CustomActionButton extends StatelessWidget {
   const CustomActionButton({

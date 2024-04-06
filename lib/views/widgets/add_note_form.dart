@@ -5,6 +5,7 @@ import 'package:note_app/cubits/add_note_cubit/add_note_cubit.dart';
 import 'package:note_app/models/note_model.dart';
 import 'package:note_app/views/widgets/custom_button.dart';
 import 'package:note_app/views/widgets/custom_text_field.dart';
+import 'package:intl/intl.dart';
 
 class AddNoteForm extends StatefulWidget {
   const AddNoteForm({
@@ -16,6 +17,7 @@ class AddNoteForm extends StatefulWidget {
 }
 
 class _AddNoteFormState extends State<AddNoteForm> {
+  final now = DateTime.now();
   final GlobalKey<FormState> formKey = GlobalKey();
 
   AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
@@ -67,7 +69,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
                     var noteModel = NoteModel(
                       title: title!,
                       content: content!,
-                      dateTime: DateTime.now().toString(),
+                      dateTime: DateFormat('dd-MM-yyyy HH:mm').format(now),
                       color: kPrimaryColor.value,
                     );
                     BlocProvider.of<AddNoteCubit>(context).AddNote(noteModel);

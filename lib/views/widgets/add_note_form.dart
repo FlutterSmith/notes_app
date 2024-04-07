@@ -17,7 +17,6 @@ class AddNoteForm extends StatefulWidget {
 }
 
 class _AddNoteFormState extends State<AddNoteForm> {
-  final now = DateTime.now();
   final GlobalKey<FormState> formKey = GlobalKey();
 
   AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
@@ -65,11 +64,14 @@ class _AddNoteFormState extends State<AddNoteForm> {
                 onTap: () {
                   if (formKey.currentState!.validate()) {
                     formKey.currentState!.save();
+                    var currentTime = DateTime.now();
+                    var formattedCurrentTime =
+                        DateFormat('dd-MM-yyyy HH:mm').format(currentTime);
 
                     var noteModel = NoteModel(
                       title: title!,
                       content: content!,
-                      dateTime: DateFormat('dd-MM-yyyy HH:mm').format(now),
+                      dateTime: formattedCurrentTime,
                       color: kPrimaryColor.value,
                     );
                     BlocProvider.of<AddNoteCubit>(context).AddNote(noteModel);
